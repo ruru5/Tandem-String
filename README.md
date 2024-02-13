@@ -1,4 +1,4 @@
-Overview
+**Overview**
 
 The goal is simple; tie barcodes to the blockchain to achieve two independent features: 1) Attach PDF417 barcodes to the blockchain to enhance identity verification and eliminate fraudulent identification. 2) Attach UPC barcodes to the blockchain to enhance product tracking, recalls, and reduce product loss during the logistical process of supply chain management.
 
@@ -19,7 +19,7 @@ affordable tracking.
 
 
 
-Problem and Solution
+**Problems and Solutions**
 
 Identity Verification
 Problem: Ultraviolet (UV) ink, holograms, physical engravings, microprint, and raised texts are all security features governments may employ on their driver's licenses to attempt to stay one step ahead of skilled counterfeiters. However, all features above are being used by counterfeiters daily and governments continue to fail at maintaining strict identity security.
@@ -31,7 +31,7 @@ Solution: Tandem String is focused on using blockchain technology for tamper-pro
 
 
 
-Roadmap
+**Roadmap**
 
 Completed tasks:
 
@@ -51,7 +51,7 @@ wallet), which will be hardcoded for this version.
 6. Create a public scanning page that allows anyone to scan a code/barcode to check if it is
 on-chain and view associated extra data.
 
-The Next Steps:
+**The Next Steps:**
 
 Dashboard customization (both tasks)
 
