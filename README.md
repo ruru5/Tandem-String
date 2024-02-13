@@ -22,11 +22,15 @@ affordable tracking.
 **Problems and Solutions**
 
 Identity Verification
+
 Problem: Ultraviolet (UV) ink, holograms, physical engravings, microprint, and raised texts are all security features governments may employ on their driver's licenses to attempt to stay one step ahead of skilled counterfeiters. However, all features above are being used by counterfeiters daily and governments continue to fail at maintaining strict identity security.
+
 Solution: Tandem String aims to integrate a unique key for every card holder. When a barcode is scanned it must match the unique key in order to be verified. The unique key is private and is refrained from public viewership. Each unique key equals a barcode on chain.
 
 Logistical Solution
+
 Problem: There is an ever growing challenge of accurately tracing and documenting products in the current supply chain industry. With expensive recall prices and tracking products, often products can be lost and difficult to precisely locate when requiring immediate action.
+
 Solution: Tandem String is focused on using blockchain technology for tamper-proof product records, geolocation tracking for precise location accuracy, and continuous real-time tracking for efficient recalls. With the use of an immutable leger, a product's barcode will be logged at every step of its life-cycle to retain complete transparency of supply chain management.
 
 
