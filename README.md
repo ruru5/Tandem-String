@@ -54,34 +54,51 @@ on-chain and view associated extra data.
 The Next Steps:
 
 Dashboard customization (both tasks)
+
 ● Create a customizable dashboard where the user can drag and drop canvas with metrics and stats.
+
 ● Create a real-time sync up system to update the dashboard data.
+
 ● Provide several metrics related to GeoLocation, Barcode, Transactions on-chain
 
 Notification system
+
 ● Create a notification system to notify the user through Email and SMS
+
 ● Integrate with Twilio to provide SMS and Email notification
 
 UI improvements  
+
 ● Improve the website with about-us, home, and services, using an appealing layout.
+
 ● Create several landing pages for marketing tests, the idea is to test it out in different
 niches.
+
 ● Improve the application UI for Identity verification and Tracking system
 
 Geolocation mapping
+
 ● Create a new feature to display barcode items on a map.
+
 ● Create a boundary system that alerts the admin when an item is scanned outside a
 boundary.
 
 Recall Features
+
 ● Create a new feature to automatize the recalling process, it should trigger emails/SMS to the final customer requesting the recall of the item.
 
 Improve site SEO
+
 ● Improve the website SEO to be better ranked in Google.
+
 ● Improve SEO for the Twitter experience.
 
 Research ZK + AI
+
 ● Studying how to apply ZK in identity verification which can be a big shift for the market.
+
 ● Study about how to apply AI in tracking systems, can be a big shift in the market Shopify Integration
+
 ● Create a Shopify App to integrate Tandem String with millions of stores
+
 ● Provide customizable features
