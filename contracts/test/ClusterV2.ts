@@ -2,6 +2,7 @@ import { expect } from "chai";
 import { ethers } from "hardhat";
 import "@nomicfoundation/hardhat-ethers";
 import { ClusterV2 } from "../typechain-types";
+import { ne } from "@faker-js/faker";
 
 describe("ClusterV2", function () {
   let contractDeployed: ClusterV2;
@@ -42,29 +43,33 @@ describe("ClusterV2", function () {
     contractDeployed = await ethers.deployContract("ClusterV2");
   });
 
+  //string memory id, string memory body, string memory customKey, uint date
+
   it("Should add barcode", async function () {
     const [owner, wallet1, wallet2] = await ethers.getSigners();
+    const date = new Date().getTime()
     const addBarcodeTx = await contractDeployed
       .connect(wallet1)
-      .addBarcode(id, uri, "wallet1");
+      .addBarcode(id, uri, "wallet1", date);
     await addBarcodeTx.wait();
     const addBarcodeTxWallet2 = await contractDeployed
       .connect(wallet2)
-      .addBarcode(id, uri, "wallet2");
+      .addBarcode(id, uri, "wallet2", date);
     await addBarcodeTxWallet2.wait();
     await expect(
       await contractDeployed.getBarcodeFromId(wallet1, id)
-    ).deep.equal([id, uri, "wallet1"]);
+    ).deep.equal([id, uri, "wallet1", date]);
     await expect(
       await contractDeployed.getBarcodeFromId(wallet2, id)
-    ).deep.equal([id, uri, "wallet2"]);
+    ).deep.equal([id, uri, "wallet2",date]);
   });
 
   it("Should remove barcode", async function () {
     const [owner, wallet1, wallet2] = await ethers.getSigners();
+    const date = new Date().getTime()
     const addBarcodeTx = await contractDeployed
       .connect(wallet1)
-      .addBarcode(id, uri, "wallet1");
+      .addBarcode(id, uri, "wallet1", date);
     await addBarcodeTx.wait();
     const editBarcodeTx = await contractDeployed
       .connect(wallet1)
@@ -72,14 +77,14 @@ describe("ClusterV2", function () {
     await editBarcodeTx.wait();
     await expect(
       await contractDeployed.getBarcodeFromId(wallet1, id)
-    ).deep.equal(["", "", ""]);
+    ).deep.equal(["", "", "", 0n]);
   });
 
   it("Should removeCode be available only for owner", async function () {
     const [owner, wallet1, wallet2] = await ethers.getSigners();
     const addBarcodeTx = await contractDeployed
       .connect(wallet1)
-      .addBarcode(id, uri, "wallet1");
+      .addBarcode(id, uri, "wallet1", new Date().getTime());
     await addBarcodeTx.wait();
     await expect(
       contractDeployed.connect(wallet1).removeCodeForOwner(wallet1, id)
@@ -88,9 +93,10 @@ describe("ClusterV2", function () {
 
   it("Should accept only admin address for removeCodeForOwner", async function () {
     const [owner, wallet1, wallet2] = await ethers.getSigners();
+    const date = new Date().getTime()
     const addBarcodeTx = await contractDeployed
       .connect(wallet1)
-      .addBarcode(id, uri, "wallet1");
+      .addBarcode(id, uri, "wallet1", date);
     await addBarcodeTx.wait();
 
     const editBarcodeTx = await contractDeployed.removeCodeForOwner(
@@ -100,18 +106,18 @@ describe("ClusterV2", function () {
     await editBarcodeTx.wait();
     await expect(
       await contractDeployed.getBarcodeFromId(wallet1, id)
-    ).deep.equal(["", "", ""]);
+    ).deep.equal(["", "", "", 0n]);
   });
 
   it("Should get all clients", async function () {
     const [owner, wallet1, wallet2] = await ethers.getSigners();
     const addBarcodeTx = await contractDeployed
       .connect(wallet1)
-      .addBarcode(id, uri, "wallet1");
+      .addBarcode(id, uri, "wallet1", new Date().getTime());
     await addBarcodeTx.wait();
     const addBarcodeTxWallet2 = await contractDeployed
       .connect(wallet2)
-      .addBarcode(id, uri, "wallet2");
+      .addBarcode(id, uri, "wallet2", new Date().getTime());
     await addBarcodeTxWallet2.wait();
 
     await expect(await contractDeployed.getAllClients()).deep.equal([
@@ -124,15 +130,15 @@ describe("ClusterV2", function () {
     const [owner, wallet1, wallet2] = await ethers.getSigners();
     const addBarcodeTx = await contractDeployed
       .connect(wallet1)
-      .addBarcode(id, uri, "wallet1");
+      .addBarcode(id, uri, "wallet1", new Date().getTime());
     await addBarcodeTx.wait();
     const addBarcodeTxWallet1 = await contractDeployed
       .connect(wallet1)
-      .addBarcode(id, uri, "wallet11");
+      .addBarcode(id, uri, "wallet11", new Date().getTime());
     await addBarcodeTxWallet1.wait();
     const addBarcodeTxWallet2 = await contractDeployed
       .connect(wallet2)
-      .addBarcode(id, uri, "wallet2");
+      .addBarcode(id, uri, "wallet2", new Date().getTime());
     await addBarcodeTxWallet2.wait();
 
     await expect(
@@ -145,33 +151,35 @@ describe("ClusterV2", function () {
 
   it("Should get all barcodes ", async function () {
     const [owner, wallet1, wallet2] = await ethers.getSigners();
+    const date = new Date().getTime()
     const addBarcodeTx = await contractDeployed
       .connect(wallet1)
-      .addBarcode(id, uri, "wallet1");
+      .addBarcode(id, uri, "wallet1", date);
     await addBarcodeTx.wait();
     const addBarcodeTxWallet1 = await contractDeployed
       .connect(wallet1)
-      .addBarcode(id_2, uri, "wallet11");
+      .addBarcode(id_2, uri, "wallet11", date);
     await addBarcodeTxWallet1.wait();
     const addBarcodeTxWallet2 = await contractDeployed
       .connect(wallet2)
-      .addBarcode(id, uri, "wallet2");
+      .addBarcode(id, uri, "wallet2", date);
     await addBarcodeTxWallet2.wait();
 
     expect(await contractDeployed.getAllBarcodes(wallet1)).deep.equal([
-      [id, uri, "wallet1"],
-      [id_2, uri, "wallet11"],
+      [id, uri, "wallet1", date],
+      [id_2, uri, "wallet11", date],
     ]);
     expect(await contractDeployed.getAllBarcodes(wallet2)).deep.equal([
-      [id, uri, "wallet2"],
+      [id, uri, "wallet2", date],
     ]);
   });
 
   it("Should add geo location", async function () {
     const [owner, wallet1, wallet2] = await ethers.getSigners();
+    const date = new Date().getTime()
     const addBarcodeTx = await contractDeployed
       .connect(wallet1)
-      .addBarcode(id, uri, "wallet1");
+      .addBarcode(id, uri, "wallet1", date);
     await addBarcodeTx.wait();
     const newLocal = {
       barcodeId: id,
@@ -185,7 +193,7 @@ describe("ClusterV2", function () {
 
     const addBarcodeTxWallet2 = await contractDeployed
       .connect(wallet2)
-      .addBarcode(id_2, uri, "wallet2");
+      .addBarcode(id_2, uri, "wallet2", date);
     await addBarcodeTxWallet2.wait();
     const newLocal2 = {
       barcodeId: id_2,
