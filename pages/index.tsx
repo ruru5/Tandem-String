@@ -84,6 +84,56 @@ export default function Home({}) {
               </div>
             </div>
           </div>
+
+          <div className="basis-1/2 align-center">
+            <div className="section bg-white text-right">
+              <div className="container">
+                <div className="row">
+                  <div className="column align-center">
+                    <h2 className="max-w-lg text-center">
+                      Logistical Blockchain Solution
+                    </h2>
+                    <p className="text-lg text-center max-w-md ">
+                      {`Tandem String is addressing the persistent challenge of
+                      accurately tracing and documenting products in the current
+                      supply chain industry. Built for unparalleled traceability
+                      and transparency, our logistical blockchain solution
+                      leverages blockchain technology with the common corporate
+                      barcode, offering a cost-effective approach to improve
+                      product management. Traditional methods often result in
+                      inefficiencies, through product loss, recalls, and
+                      fraudulent products, prompting the need for an innovative
+                      solution. The inherent characteristics of blockchain
+                      ensure a secure and transparent process, allowing for
+                      affordable and seamless product tracking. This technology
+                      not only enhances efficiency but also mitigates risks
+                      associated with inaccurate documentation. Additionally,
+                      our blockchain solution with reliable geolocation
+                      tracking, enables companies to navigate logistical
+                      complexities with confidence. Swift issue identification
+                      and targeted recalls are facilitated by the maintenance of
+                      an immutable ledger, ensuring accountability and fostering
+                      trust throughout the supply chain. Tandem String aims to
+                      fight fraud and counterfeiting, improve recall procedures,
+                      and minimize product loss.`}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="container mt-xl">
+              <div className="row ">
+                <div className="column align-center">
+                  <Link href="/traceability">
+                    <button className="button xl main mt-lg w-button text-right">
+                      {" "}
+                      Logistical Blockchain Solution
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
