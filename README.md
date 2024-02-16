@@ -20,7 +20,7 @@ affordable tracking.
 
 
 
-**Problems and Solutions**
+# Problems and Solutions
 
 Identity Verification
 
@@ -36,7 +36,7 @@ Solution: Tandem String is focused on using blockchain technology for tamper-pro
 
 
 
-**Roadmap**
+# Roadmap
 
 Completed tasks:
 
