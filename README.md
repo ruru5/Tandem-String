@@ -58,7 +58,7 @@ on-chain and view associated extra data.
 
 ### The Next Steps:
 
-### Dashboard customization (both tasks)
+#### Dashboard customization (both tasks)
 
 ● Create a customizable dashboard where the user can drag and drop canvas with metrics and stats.
 
@@ -67,14 +67,14 @@ on-chain and view associated extra data.
 ● Provide several metrics related to GeoLocation, Barcode, Transactions on-chain
 
 
-### Notification system
+#### Notification system
 
 ● Create a notification system to notify the user through Email and SMS
 
 ● Integrate with Twilio to provide SMS and Email notification
 
 
-### UI improvements  
+#### UI improvements  
 
 ● Improve the website with about-us, home, and services, using an appealing layout.
 
@@ -84,26 +84,26 @@ niches.
 ● Improve the application UI for Identity verification and Tracking system
 
 
-### Geolocation mapping
+#### Geolocation mapping
 
 ● Create a new feature to display barcode items on a map.
 
 ● Create a boundary system that alerts the admin when an item is scanned outside a
 boundary.
 
-### Recall Features
+#### Recall Features
 
 ● Create a new feature to automatize the recalling process, it should trigger emails/SMS to the final customer requesting the recall of the item.
 
 
-### Improve site SEO
+#### Improve site SEO
 
 ● Improve the website SEO to be better ranked in Google.
 
 ● Improve SEO for the Twitter experience.
 
 
-### Research ZK + AI
+#### Research ZK + AI
 
 ● Studying how to apply ZK in identity verification which can be a big shift for the market.
 
