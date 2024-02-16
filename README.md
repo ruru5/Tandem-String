@@ -3,7 +3,7 @@
 
 The goal is simple; tie barcodes to the blockchain to achieve two independent features: 1) Attach PDF417 barcodes to the blockchain to enhance identity verification and eliminate fraudulent identifications. 2) Attach UPC barcodes to the blockchain to enhance product tracking, recalls, and reduce product loss during the logistical process of supply chain management.
 
-Identity Verification Steps:
+#### Identity Verification Steps:
 1. An Admin account is created.
 2. The Admin logs a PDF417 barcode on the blockchain. At that point the barcode is given
 a unique key identifier.
@@ -12,7 +12,7 @@ compared to barcodes on the immutable leger, and once it matches the unique key 
 - If a fake barcode is scanned it won’t match any unique key, and it’ll be classified as fake due to not being on chain.
 
 
-Logistical Solution Steps:
+#### Logistical Solution Steps:
 1. A company logs their UPC barcode to the blockchain.
 2. When the barcode is scanned its geolocation is logged to the blockchain for easy and
 affordable tracking.
@@ -22,13 +22,13 @@ affordable tracking.
 
 # Problems and Solutions
 
-Identity Verification
+#### Identity Verification
 
 Problem: Ultraviolet (UV) ink, holograms, physical engravings, microprint, and raised texts are all security features governments may employ on their driver's licenses to attempt to stay one step ahead of skilled counterfeiters. However, all features above are being used by counterfeiters daily and governments continue to fail at maintaining strict identity security.
 
 Solution: Tandem String aims to integrate a unique key for every card holder. When a barcode is scanned it must match the unique key in order to be verified. The unique key is private and is refrained from public viewership. Each unique key equals a barcode on chain.
 
-Logistical Solution
+#### Logistical Solution
 
 Problem: There is an ever growing challenge of accurately tracing and documenting products in the current supply chain industry. With expensive recall prices and tracking products, often products can be lost and difficult to precisely locate when requiring immediate action.
 
@@ -38,15 +38,15 @@ Solution: Tandem String is focused on using blockchain technology for tamper-pro
 
 # Roadmap
 
-Completed tasks:
+### Completed tasks:
 
-Technical Features
+#### Technical Features
 1. Deploy a smart contract on the Polygon network using Solidity with two functions: AddCode and RemoveCode. Only the contract owner (Admin) can call these functions.
 2. The ‘AddCode’ function will accept extra data that is not signed, for simplicity.
 3. The smart contract will be deployed on the devnet (not on mainnet) and will not follow a
 specific ERC standard. The main objective is to maintain a mapping of a structure designed to preserve comprehensive barcode information.
 
-DApp Features
+#### DApp Features
 1. Develop a DApp using NextJS, which will be supported only by web browsers.
 2. Implement a Metamask-based login system.
 3. Create an admin dashboard that can only be accessed by a specific wallet address (admin
