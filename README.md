@@ -1,5 +1,6 @@
 **Overview**
 
+
 The goal is simple; tie barcodes to the blockchain to achieve two independent features: 1) Attach PDF417 barcodes to the blockchain to enhance identity verification and eliminate fraudulent identifications. 2) Attach UPC barcodes to the blockchain to enhance product tracking, recalls, and reduce product loss during the logistical process of supply chain management.
 
 Identity Verification Steps:
@@ -57,7 +58,7 @@ on-chain and view associated extra data.
 
 **The Next Steps:**
 
-Dashboard customization (both tasks)
+### Dashboard customization (both tasks)
 
 ● Create a customizable dashboard where the user can drag and drop canvas with metrics and stats.
 
@@ -65,13 +66,15 @@ Dashboard customization (both tasks)
 
 ● Provide several metrics related to GeoLocation, Barcode, Transactions on-chain
 
-Notification system
+
+### Notification system
 
 ● Create a notification system to notify the user through Email and SMS
 
 ● Integrate with Twilio to provide SMS and Email notification
 
-UI improvements  
+
+### UI improvements  
 
 ● Improve the website with about-us, home, and services, using an appealing layout.
 
@@ -80,24 +83,27 @@ niches.
 
 ● Improve the application UI for Identity verification and Tracking system
 
-Geolocation mapping
+
+### Geolocation mapping
 
 ● Create a new feature to display barcode items on a map.
 
 ● Create a boundary system that alerts the admin when an item is scanned outside a
 boundary.
 
-Recall Features
+### Recall Features
 
 ● Create a new feature to automatize the recalling process, it should trigger emails/SMS to the final customer requesting the recall of the item.
 
-Improve site SEO
+
+### Improve site SEO
 
 ● Improve the website SEO to be better ranked in Google.
 
 ● Improve SEO for the Twitter experience.
 
-Research ZK + AI
+
+### Research ZK + AI
 
 ● Studying how to apply ZK in identity verification which can be a big shift for the market.
 
