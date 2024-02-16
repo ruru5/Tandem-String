@@ -8,7 +8,7 @@ import crypto from "crypto";
 export default function Scan() {
   const address = useAddress();
   const [hash, setHash] = useState("");
-  const contractAddress = "0xa2B6eAE381671a8ade247FafB0843A00978934fd";
+  const contractAddress = "0x4e37BFAf5EC015B889E7631ef82277926F71457E";
   const { contract } = useContract(contractAddress);
   const [barcodeData, setBarcodeData] = useState<any>();
   const { data: dataBarcode } = useContractRead(contract, "getBarcodeFromId", [

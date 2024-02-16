@@ -14,7 +14,7 @@ import Notification from "@/components/Notification";
 export default function Scan() {
   const address = useAddress();
   const [hash, setHash] = useState("");
-  const contractAddress = "0x6ec40188C3538AB77675b791F1b4A3C7a2B055a6";
+  const contractAddress = "0x3eE2d8465093487cbf962e9C65F6632752c06D78";
   const { contract } = useContract(contractAddress);
   const [amount, setAmount] = useState("");
   const [city, setCity] = useState("");

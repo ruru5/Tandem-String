@@ -28,7 +28,7 @@ export default function AddPanel() {
   const [hash, setHash] = useState("");
 
   const address = useAddress();
-  const contractAddress = "0xa2B6eAE381671a8ade247FafB0843A00978934fd";
+  const contractAddress = "0x4e37BFAf5EC015B889E7631ef82277926F71457E";
   const { contract } = useContract(contractAddress);
   const { mutateAsync: addBarcodeAsync } = useContractWrite(
     contract,
