@@ -25,6 +25,7 @@ affordable tracking.
 #### Identity Verification
 
 Problem: Ultraviolet (UV) ink, holograms, physical engravings, microprint, and raised texts are all security features governments may employ on their driver's licenses to attempt to stay one step ahead of skilled counterfeiters. However, all features above are being used by counterfeiters daily and governments continue to fail at maintaining strict identity security.
+file:///Users/brandonrudie/Desktop/Screen%20Shot%202024-01-10%20at%205.57.59%20PM.png
 
 Solution: Tandem String aims to integrate a unique key for every card holder. When a barcode is scanned it must match the unique key in order to be verified. The unique key is private and is refrained from public viewership. Each unique key equals a barcode on chain.
 
