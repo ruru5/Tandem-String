@@ -56,7 +56,7 @@ wallet), which will be hardcoded for this version.
 6. Create a public scanning page that allows anyone to scan a code/barcode to check if it is
 on-chain and view associated extra data.
 
-**The Next Steps:**
+## The Next Steps:
 
 ### Dashboard customization (both tasks)
 
