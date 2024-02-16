@@ -1,4 +1,4 @@
-**Overview**
+# Overview
 
 
 The goal is simple; tie barcodes to the blockchain to achieve two independent features: 1) Attach PDF417 barcodes to the blockchain to enhance identity verification and eliminate fraudulent identifications. 2) Attach UPC barcodes to the blockchain to enhance product tracking, recalls, and reduce product loss during the logistical process of supply chain management.
