@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 import 'dotenv/config';
-import { Cluster__factory, ClusterV2__factory } from "../typechain-types";
+import { Cluster__factory } from "../typechain-types";
 
 async function main() {
   const rpcUrl = process.env.RPC_URL;
@@ -19,7 +19,7 @@ async function main() {
   console.log(`the deployer balance is`);
   console.log(`${balance} BASE goerli`);
 
-  const nftFactory = new ClusterV2__factory(deployer);
+  const nftFactory = new Cluster__factory(deployer);
   const nftContract = await nftFactory.deploy();
   const nftContractAddress = await nftContract.getAddress();
   console.log(`The NFT contract address is ${nftContractAddress}`);

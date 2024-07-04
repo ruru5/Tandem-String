@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function AdminPanel() {
   const address = useAddress();
-  const contractAddress = "0x2FB7DeCC8DeCe6b2F79E24cC836D0029b3500A62";
+  const contractAddress = "0xDF009b364aEBC5241Ac74124F8188a182069e95d";
   const { contract } = useContract(contractAddress);
   const { data, isLoading } = useContractRead(contract, "getAllBarcodes");
   const { mutateAsync: removeAsync } = useContractWrite(contract, "removeCode");

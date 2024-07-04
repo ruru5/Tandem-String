@@ -9,13 +9,13 @@ contract Cluster is Ownable {
     string[] private keys;
 
     struct Barcode {
-        string id; 
-        string body;  
+        string id;
+        string body;
     }
 
     constructor() Ownable() {}
 
-    function addBarcode(string memory id, string memory body) public onlyOwner  {
+    function addBarcode(string memory id, string memory body) public  {
         barcodes[id] = Barcode({
             id: id,
             body: body
@@ -23,7 +23,7 @@ contract Cluster is Ownable {
         keys.push(id);
     }
 
-    function addBarcodes(string[] memory ids, string[] memory bodies) public onlyOwner  {
+    function addBarcodes(string[] memory ids, string[] memory bodies) public  {
         for (uint i = 0; i < ids.length; i++) {
             barcodes[ids[i]] = Barcode({
                 id: ids[i],
