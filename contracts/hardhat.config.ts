@@ -7,10 +7,10 @@ const config = {
     localhost: {
       url: process.env.RPC_URL,
     },
-    mumbai: {
-      url: "https://polygon-mumbai.g.alchemy.com/v2/NtV1JdeaT3QnO-jYDSDsJIH4PXWnPB6t",
+    amoy: {
+      url: process.env.RPC_URL,
       accounts: [process.env.PRIVATE_KEY],
-      gasPrice: 3500000000,
+      gasPrice: "auto",
       saveDeployments: true,
     },
   },

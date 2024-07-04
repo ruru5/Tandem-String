@@ -11,7 +11,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^2.0.18",
-    "@thirdweb-dev/react": "^4.1.2",
+    "@thirdweb-dev/react": "^4.9.4",
     "canvas": "^2.11.2",
     "ethers": "5",
     "jsbarcode": "^3.11.6",
@@ -21,7 +21,7 @@
     "react-dom": "^18.2",
     "react-tailwindcss-datepicker": "^1.6.6",
     "react-zxing": "^2.0.0",
-    "dayjs": "^1.11.6" 
+    "dayjs": "^1.11.6"
   },
   "devDependencies": {
     "@types/node": "^20",

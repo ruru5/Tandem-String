@@ -16,7 +16,7 @@ import Toggle from "@/components/Toggle";
 
 export default function DashboardPanel() {
   const address = useAddress();
-  const contractAddress = "0x3eE2d8465093487cbf962e9C65F6632752c06D78";
+  const contractAddress = "0x41D0295a3D569ce352005c74a779D15A1a20026D";
   const { contract } = useContract(contractAddress);
   const { data, isLoading } = useContractRead(contract, "getAllBarcodes", [
     address,

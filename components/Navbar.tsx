@@ -1,10 +1,16 @@
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { ConnectWallet, useAddress } from "@thirdweb-dev/react";
+import {
+  ConnectWallet,
+  useAddress,
+  useNetworkMismatch,
+  useSwitchChain,
+} from "@thirdweb-dev/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { PolygonAmoyTestnet } from "@thirdweb-dev/chains";
 
 function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(" ");
@@ -12,11 +18,19 @@ function classNames(...classes: any[]) {
 
 export default function NavBar() {
   const address = useAddress();
+  const isMismatched = useNetworkMismatch();
+  const switchChain = useSwitchChain();
   const [shouldShowAdminMenu, setShouldShowAdminMenu] = useState(false);
   const [shouldShowIdentityMenu, setShouldShowIdentityMenu] = useState(false);
   const [shouldShowTraceabilityMenu, setShouldShowTraceabilityMenu] =
     useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    if (isMismatched) {
+      switchChain(PolygonAmoyTestnet.chainId);
+    }
+  }, [isMismatched, switchChain]);
 
   useEffect(() => {
     const adminAddresses = process.env.NEXT_PUBLIC_ADMIN_ADDRESS?.split(",");
@@ -143,14 +157,7 @@ export default function NavBar() {
                 </div>
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <ConnectWallet
-                  theme={"dark"}
-                  modalSize={"wide"}
-                  dropdownPosition={{
-                    side: "bottom",
-                    align: "center",
-                  }}
-                />
+                <ConnectWallet theme={"dark"} modalSize={"wide"} />
               </div>
             </div>
           </div>
